@@ -1,0 +1,78 @@
+
+Hi André,
+
+Following your email regarding the scope filters for DETECT CCIRC dashboard, I'd like to confirm our understanding before proceeding with the implementation.
+
+---
+
+**What we received:**
+
+From your email (14/04): "the filters needed to create different scopes of analysis, that we would like to include in DETECT, and be capable to adapt any time as users"
+
+Pierre provided 5 filter columns:
+• accounting_site_code_post_acc (FEM)
+• business_country (TIERS)
+• pmas_code_post_acc (FEM)
+• cd_uds_pmas_metier_ap_acc (FEM) — NEW
+• lb_site_risque_apres_accr (FEM) — NEW
+
+And 4 pre-defined scopes: US, Fortis, BCeF, Japan — each with specific filter criteria.
+
+---
+
+**Our interpretation:**
+
+After analysis, we understand the requirement as follows:
+
+1. **The 5 columns are building blocks** — They are used to DEFINE scopes, not to be exposed as user-facing filters.
+
+2. **Scopes are the primary concept** — Users think in terms of "I want to see US data" rather than "I want to filter by accounting_site = 12309".
+
+3. **"Adapt any time as users" means:**
+   - Users can SWITCH between scopes instantly (US → Fortis → BCeF → Japan)
+   - Users can view "All" data if needed
+   - It does NOT mean users need to BUILD custom filters themselves
+
+4. **Simple UI** — A single "Scope" dropdown with options: All, US, Fortis, BCeF, Japan.
+
+---
+
+**Why this interpretation?**
+
+• The scope definitions are business concepts, not ad-hoc filters
+• BCeF logic (NOT IN + IS NULL) is too complex for manual Tableau filtering
+• Fortis has 200+ accounting codes — impractical as a multi-select filter
+• Exposing 5 technical columns would confuse end users
+
+---
+
+**Question about unused columns:**
+
+We noticed that 2 of the 5 columns are NOT used in any of the 4 scope definitions:
+
+| Column | Used in Scope? |
+|--------|----------------|
+| accounting_site_code_post_acc | ✅ US, Fortis, Japan |
+| pmas_code_post_acc | ✅ BCeF, Japan |
+| lb_site_risque_apres_accr | ✅ BCeF |
+| **business_country** | ❌ Not used |
+| **cd_uds_pmas_metier_ap_acc** | ❌ Not used |
+
+Could you clarify the purpose of these 2 columns?
+• Are they for future scopes?
+• Should they be included in existing scope definitions?
+• Should they be exposed as additional standalone filters?
+
+---
+
+**Could you please confirm:**
+
+1. Is our interpretation of "adapt any time as users" correct?
+2. Who are the "users" — Tableau analysts? Business stakeholders?
+3. Do users need to CREATE new scopes themselves, or only switch between the 4 pre-defined ones?
+4. What is the purpose of business_country and cd_uds_pmas_metier_ap_acc?
+5. How often do you expect scope definitions to change?
+
+Once confirmed, I will share the detailed UI mockup and data architecture proposal.
+
+Best regards
