@@ -1,153 +1,151 @@
 {
-  "_version": "1.0",
-  "_description": "ICAAP scope definitions for DETECT dashboard",
-  "_last_updated": "2026-06",
-  "_author": "DETECT Team (from André's requirements)",
+  "_version": "2.0",
+  "_description": "ICAAP scope definitions for DETECT dashboard - COMPLETE",
+  "_last_updated": "2026-06-09",
+  "_source": "André's filter conditions (from photos)",
+  
+  "flow_id": "icaap",
+  "flow_name": "ICAAP Dashboard",
+  
+  "scope_labels": {
+    "bnl": "BNL",
+    "fortis": "Fortis",
+    "pf": "PF",
+    "bgl": "BGL",
+    "pfspain": "PF Spain",
+    "pfitaly": "PF Italy"
+  },
   
   "scopes": {
-    "_comment": "ICAAP Scope definitions based on André's email (June 2026)",
-    
     "bnl": {
-      "label": "🇮🇹 BNL",
+      "label": "BNL",
       "description": "BNL Italy entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "41258", "42460", "45109", "57654", "58492", "65224", "69090", "57561"
+            41258, 42460, 45109, 57654, 58492, 65224, 69090, 57561
           ]
         }
       }
     },
     
     "fortis": {
-      "label": "🇧🇪 FORTIS",
+      "label": "Fortis",
       "description": "Fortis Belgium entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "10276", "10846", "12332", "12524", "12714", "13394", "13504", "13555",
-            "13559", "13560", "13577", "13579", "13605", "13613", "13626", "13644",
-            "13676", "13716", "13782", "13898", "13913", "13960", "13961", "13983",
-            "36660", "40276", "40280", "40283", "40439", "40442", "40443", "40446",
-            "40556", "41065", "41146", "41176", "41269", "41331", "41332", "42947",
-            "42960", "42971", "43213", "44638", "44973", "45105", "45106", "45153",
-            "45657", "45660", "45719", "45725", "45811", "46398", "46554", "46672",
-            "47101", "47187", "47870", "47873", "48211", "51653", "52855", "55877",
-            "55889", "56853", "57247", "57378", "57673", "58464", "58497", "67168",
-            "67169", "67226", "67318", "67441", "67715", "68502", "68671", "69149",
-            "69150", "69260", "69549"
+            10276, 10846, 12332, 12524, 12714, 13394, 13504, 13555,
+            13559, 13560, 13577, 13579, 13605, 13613, 13626,
+            13644, 13676, 13716, 13782, 13898, 13913, 13960, 13961, 13981,
+            14062, 14099, 14138, 14227, 21011, 21740,
+            22149, 22152, 22154, 22156, 22840, 22868, 22870, 22872, 34013,
+            35344, 35443, 35649, 35650, 35651, 35733,
+            35778, 36057, 36195, 36603, 36660, 40276, 40280, 40283, 40439,
+            40442, 40443, 40446, 40556, 41065, 41146,
+            41176, 41269, 41331, 41332, 42947, 42960, 42971, 43213, 44638,
+            44973, 45105, 45106, 45124, 45126, 45331,
+            45434, 45438, 45458, 45495, 45502, 45510, 45512, 45516, 45555,
+            45561, 45569, 45572, 45609, 45611, 45615,
+            45618, 45628, 45629, 45632, 45637, 45643, 45647, 45653, 45657,
+            45660, 45719, 45725, 45811, 46398, 46554,
+            46672, 47101, 47187, 47870, 47873, 48211, 51653, 52855, 55877,
+            55889, 56853, 57247, 57378, 57673, 58464,
+            58497, 61958, 63399, 63403, 63405, 63410, 63704, 63709, 63714,
+            63723, 63925, 65224, 65281, 65328, 65596,
+            65793, 65814, 66211, 66455, 66456, 66468, 66500, 66518, 66519,
+            66945, 66974, 67168, 67169, 67226, 67318,
+            67441, 67715, 68502, 68671, 69149, 69150, 69260, 69549
           ]
         }
       }
     },
     
     "pf": {
-      "label": "🏦 PF",
+      "label": "PF",
       "description": "Personal Finance entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "10203", "12272", "12964", "12965", "13513", "13609", "13621", "13642",
-            "13673", "13818", "22357", "24240", "35304", "35419", "35466", "35737",
-            "35738", "36179", "36207", "40173", "40845", "44020", "45222", "47920",
-            "52", "67548", "67613", "67841", "68084", "68085", "68127", "68160",
-            "68652", "68653", "68865", "69105"
+            10203, 12272, 12964, 12965, 13513, 13609, 13621, 13642,
+            13673, 13818, 22357, 24240, 35304,
+            35419, 35466, 35737, 35738, 36179, 36207, 40173, 40845, 44020,
+            45222, 47920, 57997, 58500, 59644,
+            59646, 62591, 62592, 62826, 63285, 63326, 63688, 63724, 63975,
+            65244, 65245, 65565, 65826, 66429,
+            66462, 66489, 66501, 66913, 67151, 67164, 67206, 67412, 67548,
+            67613, 67841, 68084, 68085, 68127,
+            68160, 68652, 68653, 68865, 69105
           ]
         }
       }
     },
     
     "bgl": {
-      "label": "🇱🇺 BGL",
+      "label": "BGL",
       "description": "BGL Luxembourg entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "10276", "12524", "13559", "13560", "13579", "13605", "13626", "13644",
-            "13782", "13898", "13960", "13961", "14062", "14138", "21011", "21740",
-            "22840", "22868", "22870", "22872", "35778", "36057", "36195", "36603",
-            "40", "61958", "65793", "66455", "66456", "66468", "66500", "66518",
-            "66519", "67169", "67226", "68671", "69549", "67318"
+            10276, 12524, 13559, 13560, 13579, 13605, 13626, 13644,
+            13782, 13898, 13960, 13961, 14062, 14138,
+            21011, 21740, 22840, 22868, 22870, 22872, 35778, 36057, 36195,
+            36603, 40280, 40283, 40556, 41269,
+            42947, 42960, 45105, 45106, 45124, 45126, 45438, 45516, 45555,
+            45572, 45609, 45611, 45615, 45618,
+            45628, 45629, 45637, 45643, 46672, 57247, 57673, 61958, 65793,
+            66455, 66456, 66468, 66500, 66518,
+            66519, 67169, 67226, 68671, 69549, 67318
           ]
         }
       }
     },
     
     "pfspain": {
-      "label": "🇪🇸 PF Spain",
+      "label": "PF Spain",
       "description": "Personal Finance Spain entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "13609", "63688", "66429", "66501", "67206", "67548", "68160", "68865"
+            13609, 63688, 66429, 66501, 67206, 67548, 68160, 68865
           ]
         }
       }
     },
     
     "pfitaly": {
-      "label": "🇮🇹 PF Italy",
+      "label": "PF Italy",
       "description": "Personal Finance Italy entities",
       "filters": {
         "accounting_site_code_post_acc": {
           "operator": "IN",
           "values": [
-            "22357", "66489"
+            22357, 66489
           ]
-        }
-      }
-    },
-    
-    "bcef": {
-      "label": "💳 BCeF",
-      "description": "BCeF scope: PMA_03 excluding BNPP Factor France",
-      "filters": {
-        "pmas_code_post_acc": {
-          "operator": "EQUALS",
-          "value": "PMA_03"
-        },
-        "lb_site_risque_apres_accr": {
-          "operator": "NOT_IN",
-          "values": ["BNPP Factor France"],
-          "allow_null": true
-        }
-      }
-    },
-    
-    "japan": {
-      "label": "🇯🇵 Japan",
-      "description": "Japan entities: specific accounting sites AND PMA_05",
-      "filters": {
-        "accounting_site_code_post_acc": {
-          "operator": "IN",
-          "values": ["30448", "48019"]
-        },
-        "pmas_code_post_acc": {
-          "operator": "EQUALS",
-          "value": "PMA_05"
         }
       }
     }
   },
   
-  "scope_ui": {
-    "_comment": "Configuration for Tableau dropdown",
-    "default": "all",
-    "options": [
-      {"id": "all", "label": "🌐 All", "filter": null},
-      {"id": "bnl", "label": "🇮🇹 BNL", "filter": "scope_bnl = true"},
-      {"id": "fortis", "label": "🇧🇪 FORTIS", "filter": "scope_fortis = true"},
-      {"id": "pf", "label": "🏦 PF", "filter": "scope_pf = true"},
-      {"id": "bgl", "label": "🇱🇺 BGL", "filter": "scope_bgl = true"},
-      {"id": "pfspain", "label": "🇪🇸 PF Spain", "filter": "scope_pfspain = true"},
-      {"id": "pfitaly", "label": "🇮🇹 PF Italy", "filter": "scope_pfitaly = true"},
-      {"id": "bcef", "label": "💳 BCeF", "filter": "scope_bcef = true"},
-      {"id": "japan", "label": "🇯🇵 Japan", "filter": "scope_japan = true"}
-    ]
-  }
+  "output_columns": [
+    "period_run",
+    "entity",
+    "target_variable",
+    "observed_value",
+    "baseline_value",
+    "deviation",
+    "anomaly",
+    "rank",
+    "accounting_site_code_post_acc",
+    "pmas_code_post_acc",
+    "lb_site_risque_apres_accr",
+    "cd_uds_pmas_metier_ap_acc",
+    "business_country",
+    "perimeters_list"
+  ]
 }
